@@ -10,7 +10,7 @@ import {
   ExtendedNavbar,
   NavbarLinkExtended,
   StyledImg,
-} from "./styles/NavStyle";
+} from "./styles/NavbarStyle";
 export interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = (props) => {
