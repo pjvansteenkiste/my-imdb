@@ -91,8 +91,8 @@ export const ExtendedNavbar = styled("div")`
   }
 `;
 export const StyledImg = styled("img")`
-  width: 10%;
-  height: 55px;
+  // width: 10%;
+  height: 20px;
   display: flex;
   @media (max-width: 700px) {
     height: 60px;

@@ -23,9 +23,10 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   return (
     <NavbarContainer extend={extendNavbar}>
       <NavbarLinkContainer>
-        <StyledImg src={logo} alt="logo" />
+        {/* <StyledImg src={logo} alt="logo" />git  */}
+
         <NavbarLink className="nav-link active" to="/home">
-          Home
+          <StyledImg src={logo} alt="logo" />
         </NavbarLink>
         <NavbarLink className="nav-link" to="/Movies">
           Movies
@@ -43,6 +44,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
       </NavbarLinkContainer>
       {extendNavbar && (
         <ExtendedNavbar>
+          <StyledImg src={logo} alt="logo" />
           <NavbarLinkExtended className="nav-link active" to="/home">
             Home
           </NavbarLinkExtended>
