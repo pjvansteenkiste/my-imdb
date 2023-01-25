@@ -1,27 +1,23 @@
-import React, { Component } from "react";
-import NavBar from "./Components/NavBar";
-import "reset-css";
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AboutPage from "./pages/About/About";
+import HomePage from "./pages/home/home";
+import ContactPage from "./pages/Contact/Contact";
+import Navbar from "./Components/Navbar/NavBar";
 
-const navigation = {
-  brand: { name: "Navbar", to: "/" },
-  links: [
-    { name: "Movies", to: "/movies" },
-    { name: "TV-series", to: "/tv-series" },
-    { name: "Favorites", to: "/favorites" },
-    { name: "Development", to: "/dev" },
-    { name: "Contact", to: "/contact" },
-  ],
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="home" element={<HomePage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="contact" element={<ContactPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
-
-class App extends Component {
-  public render() {
-    const { brand, links } = navigation;
-    return (
-      <div className="App">
-        <NavBar brand={brand} links={links} />
-      </div>
-    );
-  }
-}
 
 export default App;
