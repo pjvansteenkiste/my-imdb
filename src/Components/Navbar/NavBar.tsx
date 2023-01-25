@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/images/logo.svg";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {
@@ -8,6 +9,7 @@ import {
   ButtonLink,
   ExtendedNavbar,
   NavbarLinkExtended,
+  StyledImg,
 } from "./styles/NavStyle";
 export interface NavbarProps {}
 
@@ -21,21 +23,22 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   return (
     <NavbarContainer extend={extendNavbar}>
       <NavbarLinkContainer>
+        <StyledImg src={logo} alt="logo" />
         <NavbarLink className="nav-link active" to="/home">
           Home
         </NavbarLink>
-        <NavbarLink className="nav-link" to="/about">
-          About Us
+        <NavbarLink className="nav-link" to="/Movies">
+          Movies
         </NavbarLink>
-        <NavbarLink className="nav-link" to="/contact">
-          Contact Us
+        <NavbarLink className="nav-link" to="/TV-Series">
+          TV-Series
         </NavbarLink>
         <ButtonLink
           onClick={() => {
             setExtendNavbar((current) => !current);
           }}
         >
-          {extendNavbar ? <>&#1005;</> : <>&#8801;</>}
+          {extendNavbar ? <>&#120143;</> : <>&#8801;</>}
         </ButtonLink>
       </NavbarLinkContainer>
       {extendNavbar && (
@@ -43,11 +46,11 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           <NavbarLinkExtended className="nav-link active" to="/home">
             Home
           </NavbarLinkExtended>
-          <NavbarLinkExtended className="nav-link" to="/about">
-            About Us
+          <NavbarLinkExtended className="nav-link" to="/Movies">
+            Movies
           </NavbarLinkExtended>
-          <NavbarLinkExtended className="nav-link" to="/contact">
-            Contact Us
+          <NavbarLinkExtended className="nav-link" to="/TV-Series">
+            TV-Series
           </NavbarLinkExtended>
         </ExtendedNavbar>
       )}

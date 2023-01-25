@@ -1,7 +1,7 @@
-const AboutPage: React.FC = () => {
+const MoviesPage: React.FC = () => {
   return (
     <div className="container text-center">
-      <h1>About Page</h1>
+      <h1>Movies Page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quasi
         debitis fuga deserunt, placeat qui optio totam perspiciatis error.
@@ -11,4 +11,4 @@ const AboutPage: React.FC = () => {
     </div>
   );
 };
-export default AboutPage;
+export default MoviesPage;
